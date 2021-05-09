@@ -1,0 +1,99 @@
+$body-color: black;
+
+@mixin buttons {
+
+  margin:auto;
+  cursor: pointer;
+  border:transparent;
+  padding: 15px 44px;
+  gap:2px;
+  box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+
+  &:hover{
+    color:rgba(73, 73, 73, 0.829)
+  }
+};
+
+body {
+
+  color: $body-color;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin:auto;
+  width:1000px;
+  height:800px;
+  background-color: rgba(245, 245, 245, 0.123);
+
+  *:focus{
+
+    outline: none;
+
+   }
+};
+
+.container{
+
+  width:1000px;
+  height: 800px;
+  margin:auto;
+
+#textArea{
+
+  background-color: whitesmoke;
+  box-shadow: grey;
+  width:500px;
+  height: 700px;
+  margin:auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  line-height: 1.6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  overflow-y: auto;
+
+  ul{
+    position: absolute;
+  }
+
+
+}
+
+.btns{
+
+  margin: 60px 0 0 250px;
+  display: flex;
+  width:11%;
+  border-radius: 7px;
+
+
+   #btns_bold{
+
+    @include buttons();
+    border-top-left-radius: 5px;
+
+  }
+
+  #btns_italic{
+
+    @include buttons()
+
+  }
+
+  #btns_bulletPoints{
+
+    @include buttons()
+  }
+  #btns_save{
+
+    @include buttons()
+  }
+
+  #btns_read{
+
+    @include buttons();
+    border-top-right-radius: 5px;
+
+  }
+}
+}
+
